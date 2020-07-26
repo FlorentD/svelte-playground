@@ -1,2 +1,0 @@
-# svelte-playground
-Begin app
