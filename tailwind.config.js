@@ -7,7 +7,7 @@ module.exports = {
     },
     fontFamily: {
       display: ["Ranchers", "cursive"],
-      body: ["Ranchers", "cursive"],
+      body: ["Roboto", "sans"],
     },
     extend: {
       colors: { blue: "#490495" },

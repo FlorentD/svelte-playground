@@ -1,5 +1,6 @@
 <script>
   import Tailwindcss from "./Tailwindcss.svelte";
+  import Title from "./Title.svelte";
   import { onMount } from "svelte";
   import Form from "./Form.svelte";
   export let name;
@@ -13,7 +14,7 @@
 
 <Tailwindcss />
 <main>
-  <h1 class="title">Hello {name}!</h1>
+  <Title>Hello {name}!</Title>
   <h2>{message}</h2>
   <h3>Change me!</h3>
   <p>
