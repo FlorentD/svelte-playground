@@ -1,5 +1,6 @@
 <script>
-  import Tailwindcss from "./Tailwindcss.svelte";
+  import "./styles.pcss";
+  import { Router, Link, Route } from "svelte-routing";
   import Title from "./Title.svelte";
   import { onMount } from "svelte";
   import Form from "./Form.svelte";
@@ -12,9 +13,14 @@
   });
 </script>
 
-<Tailwindcss />
 <main>
-  <Title>Hello {name}!</Title>
+  <Router>
+    <Link to="/">Home</Link>
+    <Link to="about">About</Link>
+    <Route path="/">
+      <Title>Hello {name}!</Title>
+    </Route>
+  </Router>
   <h2>{message}</h2>
   <h3>Change me!</h3>
   <p>

@@ -2,8 +2,9 @@ import svelte from "rollup-plugin-svelte";
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import livereload from "rollup-plugin-livereload";
-import sveltePreprocess from "svelte-preprocess";
+import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
+import path from "path";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -19,12 +20,15 @@ export default {
     svelte({
       // enable run-time checks when not in production
       dev: !production,
-      preprocess: sveltePreprocess({ postcss: true }),
       // we'll extract any component CSS out into
       // a separate file — better for performance
       css: (css) => {
         css.write("public/bundle.css");
       },
+    }),
+    postcss({
+      // Or with custom file name
+      extract: path.resolve("public/tailwind.css"),
     }),
 
     // If you have external dependencies installed from
