@@ -5,8 +5,8 @@
     "../Form.svelte"
   ],
   "sourcesContent": [
-    "<style>\n  input {\n    @apply bg-white;\n    @apply text-blue;\n  }\n</style>\n\n<form class=\"container mx-auto\">\n  <label for=\"email\">Email</label>\n  <input name=\"email\" type=\"email\" placeholder=\"my form\" />\n</form>\n"
+    "<style>input {\n  --bg-opacity: 1;\n  background-color: #fff;\n  background-color: rgba(255, 255, 255, var(--bg-opacity));\n  --text-opacity: 1;\n  color: #490495;\n  color: rgba(73, 4, 149, var(--text-opacity));\n}</style>\n\n<form class=\"container mx-auto\">\n  <label for=\"email\">Email</label>\n  <input name=\"email\" type=\"email\" placeholder=\"my form\" />\n</form>\n"
   ],
   "names": [],
-  "mappings": "AACE,KAAK,cAAC,CAAC,AACL,OAAO,QAAQ,CAAC,CAChB,OAAO,SAAS,CAAC,AACnB,CAAC"
+  "mappings": "AAAO,KAAK,cAAC,CAAC,AACZ,YAAY,CAAE,CAAC,CACf,gBAAgB,CAAE,IAAI,CACtB,gBAAgB,CAAE,KAAK,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,IAAI,YAAY,CAAC,CAAC,CACxD,cAAc,CAAE,CAAC,CACjB,KAAK,CAAE,OAAO,CACd,KAAK,CAAE,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,IAAI,cAAc,CAAC,CAAC,AAC9C,CAAC"
 }
